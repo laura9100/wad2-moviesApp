@@ -20,21 +20,27 @@ describe("Movie Details Page", () => {
   });
   describe("Base tests", () => {
     it("should display movie title in the page header", () => {
-      cy.get("h3").contains(movie.title);
+        cy.get("h3").contains(movie.title);
+    });
+
+    it("should display the movie's details", () => {
+      cy.get("h3").contains("Overview");
+      cy.get("h3").next().contains(movie.overview);
+      cy.get("ul")
+        .eq(1)
+        .within(() => {
+          const genreChips = movie.genres.map((g) => g.name);
+          genreChips.unshift("Genres");
+          cy.get("span").each(($card, index) => {
+            cy.wrap($card).contains(genreChips[index]);
+          });
+        });
+    });
+    it("should display the movie's poster on the left handside", () => {
+        cy.get("img[class='MuiGridListTile-imgFullHeight']");
+       
+      });
+
+
     });
   });
-
-  it("should display the movie's details", () => {
-    cy.get("h3").contains("Overview");
-    cy.get("h3").next().contains(movie.overview);
-    cy.get("ul")
-      .eq(1)
-      .within(() => {
-        const genreChips = movie.genres.map((g) => g.name);
-        genreChips.unshift("Genres");
-        cy.get("span").each(($card, index) => {
-          cy.wrap($card).contains(genreChips[index]);
-        });
-      });
-  });
-});
