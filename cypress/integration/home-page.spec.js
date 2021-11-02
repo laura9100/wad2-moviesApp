@@ -88,6 +88,18 @@ describe("Home Page ", () => {
        });
      });
    });
+   
+
+   describe("Favouriting", () => {
+       it("should favourite a movie", () => {
+            
+              cy.get("button[aria-label='add to favorites']").eq(0).click();
+              
+              cy.get("header").find(".MuiToolbar-root").find("button").eq(1).click();
+           
+   });
+});
+
 
 //    describe("By movie title and genre", () => {
 //        it("Should display movies filtered by both title and genre", () => {
