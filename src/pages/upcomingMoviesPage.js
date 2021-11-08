@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PageTemplate from '../components/templateMovieListPage'
 import { getUpcomingMovies } from "../api/tmdb-api";
+import IconButton from "@material-ui/core/IconButton";
+import PlaylistAdd from "@material-ui/icons/PlaylistAdd";
 
 const UpcomingMoviesPage = (props) => {
   const [movies, setMovies] = useState([]);
@@ -21,8 +23,9 @@ const UpcomingMoviesPage = (props) => {
       movies={movies}  
       action={(movie)=> {
         return(
-        <>
-        </>
+        <IconButton aria-label="add to watchlist">
+        <PlaylistAdd color="primary" fontSize="large" />
+      </IconButton>        
         );
       } 
     } 
