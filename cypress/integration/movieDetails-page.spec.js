@@ -37,7 +37,7 @@ describe("Movie Details Page", () => {
         });
     });
     it("should display the movie's poster on the left handside", () => {
-        cy.get("img[class='MuiGridListTile-imgFullHeight']");
+        cy.get("img").should('have.css','text-align','left');
        
       });
 
