@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import ShowList from "../tvList";
-import Header from "../headerMovieList";
+import Header from "../headerTvList";
 import FilterCard from "../filterTvShowCard";
 import { makeStyles } from "@material-ui/core/styles";
 
