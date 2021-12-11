@@ -20,8 +20,8 @@ const TvShowsPage = (props) => {
   const shows = data.results;
 
  // Redundant, but necessary to avoid app crashing.
- const Tvfavorites = shows.filter(s => s.favorite)
- localStorage.setItem('favorites', JSON.stringify(Tvfavorites))
+ const tvFavorites = shows.filter(s => s.favorite)
+ localStorage.setItem('favorites', JSON.stringify(tvFavorites))
 
 
   return (
