@@ -2,11 +2,11 @@ import React from "react";
 import PageTemplate from "../components/templateTvShowListPage";
 import { useQuery } from 'react-query'
 import Spinner from '../components/spinner'
-import {getTopRated} from '../api/tmdb-api'
+import {getAiringNow} from '../api/tmdb-api'
 import AddToFavoritesIcon from '../components/cardIcons/addToTvFavorites'
 
 const AiringNowPage = (props) => {
-  const {  data, error, isLoading, isError }  = useQuery('top rated', getTopRated)
+  const {  data, error, isLoading, isError }  = useQuery('Airing now', getAiringNow)
 
   if (isLoading) {
     return <Spinner />
@@ -24,7 +24,7 @@ const AiringNowPage = (props) => {
 
   return (
     <PageTemplate
-      title="Airing npw"
+      title="Airing Now"
      shows={shows}
       action={(show) => {
         return <AddToFavoritesIcon show={show} />
