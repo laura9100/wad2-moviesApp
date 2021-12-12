@@ -44,14 +44,12 @@ This Web App includes movies, favourite movies, upcoming and top rated movies, t
 
 ### Routing.
 
-[ List the __new routes__ supported by your app and state the associated page.]
 
 + /shows/airingnow Airing Today.
 + /shows/tvShows All Tv Shows
 + /shows/:id Tv Shows Details.
 + /movies/upcoming Upcoming movies.
 
-[If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
 
 
 Assignment 1 - Agile Software Practice.
