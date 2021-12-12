@@ -3,7 +3,7 @@ import PageTemplate from "../components/templateTvShowListPage";
 import { useQuery } from 'react-query'
 import Spinner from '../components/spinner'
 import {getAiringNow} from '../api/tmdb-api'
-import AddToFavoritesIcon from '../components/cardIcons/addToTvFavorites'
+
 
 const AiringNowPage = (props) => {
   const {  data, error, isLoading, isError }  = useQuery('Airing now', getAiringNow)
@@ -17,9 +17,6 @@ const AiringNowPage = (props) => {
   }  
   const shows = data.results;
 
-  // Redundant, but necessary to avoid app crashing.
-  const tvFavorites = shows.filter(m => m.favorite)
-  localStorage.setItem('favorites', JSON.stringify(tvFavorites))
  
 
   return (
@@ -27,7 +24,6 @@ const AiringNowPage = (props) => {
       title="Airing Now"
      shows={shows}
       action={(show) => {
-        return <AddToFavoritesIcon show={show} />
       }}
     />
   );
