@@ -7,7 +7,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardHeader from "@material-ui/core/CardHeader";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import FavoriteIcon from "@material-ui/icons/Favorite";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
 
@@ -27,8 +26,6 @@ const useStyles = makeStyles({
 
 export default function TvCard({ show, action }) {
   const classes = useStyles();
-
-
 
   return (
     <Card className={classes.card}>

@@ -21,9 +21,6 @@ const TvShowsPage = (props) => {
       title="TV Shows"
       shows={shows}
       action={(show) => {
-        
-    
-        
       }}
     />
 );
