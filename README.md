@@ -1,46 +1,34 @@
 # wad2-moviesApp
 # Assignment 1 - ReactJS app.
 
-Name: [your name]
+Name: Laura McBride
 
 ## Overview.
-
-[A brief statement on the content of this repository.]
-
+This Web App includes movies, favourite movies, upcoming and top rated movies, tv shows that are airing today and tv shows. You can filter and search in all these features.
 ### Features.
 [ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
  
-+ Feature 1
-+ Feature 2
-+ Feature 3
-+ etc
++ Upcoming Movies
++ Top Rated Movies
++ Tv Shows 
++ Tv Shows airing now
 + etc
 
-## Setup requirements.
-
-[ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
 
 ## API endpoints.
 
-[ List the __additional__ TMDB endpoints used, giving the description and pathname for each one.] 
-
-e.g.
-+ Discover list of movies - discover/movie
-+ Movie details - movie/:id
-+ Movie genres = /genre/movie/list
++ Upcoming Movies - /movies/upcoming
++ Top Rated Movies - /movies/toprated
++ Tv Shows airing now - /shows/airingnow
++ Tv Shows - /shows/tvShows
++ Tv Details -/shows/id
 
 ## App Design.
-
-### Component catalogue.
-
-[ Insert a screenshot from the Storybook UI that lists all the stories for the app's components, and highlight those relating to your __new/modified components__ - see the example screenshot below.] .......
-
-![](./images/storybook.png)
 ### UI Design.
 
 [ Insert screenshots of the __new/modified app pages__ you developed (and modified existing pages), Include an appropriate caption for each one (see example below).
 
-![ ](./images/view.png)
+![image](https://user-images.githubusercontent.com/47563943/145731897-075ec290-62e8-4eae-8f6f-66c7e8f4fcc5.png)
 
 >Shows detailed information on a movie. Clicking the 'Reviews' floating action button will display extracts from critic reviews.
 
