@@ -72,4 +72,4 @@ Assignment 1 - Agile Software Practice.
 
 + cypress/integration/airingNow-page.spec.js - line 39
 + cypress/integration/topRated-page.spec.js - line 92
-+cypress/integration/upcoming-page.spec.js - line 75
++ cypress/integration/upcoming-page.spec.js - line 75
