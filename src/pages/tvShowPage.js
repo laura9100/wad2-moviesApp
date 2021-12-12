@@ -4,6 +4,9 @@ import Spinner from '../components/spinner'
 import {getTvShows} from '../api/tmdb-api'
 import PageTemplate from "../components/templateTvShowListPage";
 
+
+
+
 const TvShowsPage = (props) => {
   const {  data, error, isLoading, isError }  = useQuery('tvShows', getTvShows)
 
@@ -15,6 +18,11 @@ const TvShowsPage = (props) => {
     return <h1>{error.message}</h1>
   }  
   const shows = data.results;
+
+ // Redundant, but necessary to avoid app crashing.
+ const Tvfavorites = shows.filter(s => s.favorite)
+ localStorage.setItem('favorites', JSON.stringify(Tvfavorites))
+
 
   return (
     <PageTemplate
