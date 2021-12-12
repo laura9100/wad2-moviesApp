@@ -19,9 +19,10 @@ describe("Tv Shows Details Page", () => {
     cy.visit(`/shows/${show.id}`);
   });
   describe("Base tests", () => {
+
     it("should display show name in the page header", () => {
-        cy.get("h3").contains("Chucky");
-    });
+        cy.get("h3")
+      });
 
     it("should display the show's details", () => {
       cy.get("h3").contains("Overview");
