@@ -30,26 +30,29 @@ This Web App includes movies, favourite movies, upcoming and top rated movies, t
 
 ![image](https://user-images.githubusercontent.com/47563943/145731897-075ec290-62e8-4eae-8f6f-66c7e8f4fcc5.png)
 
->Shows detailed information on a movie. Clicking the 'Reviews' floating action button will display extracts from critic reviews.
+>New movies that are up and coming
+![image](https://user-images.githubusercontent.com/47563943/145731970-4bd77d78-e19f-4633-9382-1b72d3ed89f7.png)
 
-![ ](./images/view.png)
+>Top Rated movies of all time.
+![image](https://user-images.githubusercontent.com/47563943/145731995-e753abc5-0518-416c-a16a-3e0f1154e6e4.png)
 
->Shows detailed information on a movie. Clicking the 'Reviews' floating action button will display extracts from critic reviews.
+>What tv shows are airing today
+![image](https://user-images.githubusercontent.com/47563943/145732017-1f85ae3e-960b-44ee-a4f3-c8c5144b11ec.png)
+>Shows a list of all Tv Shows
+
+>Each of these pages can be searched and filtered
 
 ### Routing.
 
 [ List the __new routes__ supported by your app and state the associated page.]
 
-+ /blogs - displays all published blogs.
-+ /blogs/:id - displays a particular blog.
-+ /blogs/:id/comments - detail view of a particular blog and its comments.
-+ etc.
++ /shows/airingnow Airing Today.
++ /shows/tvShows All Tv Shows
++ /shows/:id Tv Shows Details.
++ /movies/upcoming Upcoming movies.
 
 [If relevant, state what aspects of your app are protected (i.e. require authentication) and what is public.]
 
-## Independent learning (If relevant).
-
-[ Itemize the technologies/techniques you researched independently and adopted in your project, i.e. aspects not covered in the lectures/labs. Include the source code filenames that illustrate these (we do not require code excerpts) and provide references to the online resources that helped you (articles/blogs).
 
 Assignment 1 - Agile Software Practice.
 
