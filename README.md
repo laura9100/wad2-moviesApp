@@ -6,8 +6,7 @@ Name: Laura McBride
 ## Overview.
 This Web App includes movies, favourite movies, upcoming and top rated movies, tv shows that are airing today and tv shows. You can filter and search in all these features.
 ### Features.
-[ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
- 
+
 + Upcoming Movies
 + Top Rated Movies
 + Tv Shows 
@@ -26,7 +25,7 @@ This Web App includes movies, favourite movies, upcoming and top rated movies, t
 ## App Design.
 ### UI Design.
 
-[ Insert screenshots of the __new/modified app pages__ you developed (and modified existing pages), Include an appropriate caption for each one (see example below).
+
 
 ![image](https://user-images.githubusercontent.com/47563943/145731897-075ec290-62e8-4eae-8f6f-66c7e8f4fcc5.png)
 >New movies that are up and coming
