@@ -76,7 +76,7 @@ describe("Airing Now Page ", () => {
    describe("By shows genre", () => {
     it("should display shows with the specified genre only", () => {
        const selectedGenreId = 35;
-       const selectedGenreText = "Action";
+       const selectedGenreText = "Comedy";
        const matchingShows = filterByGenre(shows, selectedGenreId);
        cy.get("#filled-search").clear();
        cy.get("#Tvgenre-select").click();
