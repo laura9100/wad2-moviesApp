@@ -1,4 +1,4 @@
-import React from "react";  // useState/useEffect redundant 
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -10,10 +10,10 @@ import TextField from "@material-ui/core/TextField";
 import SearchIcon from "@material-ui/icons/Search";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg';
-import { getTvGenres } from "../../api/tmdb-api";
+import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg'
+import { getGenres } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
-import Spinner from '../spinner';
+import Spinner from '../spinner'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FilterTvShowsCard(props) {
+export default function FilterMoviesCard(props) {
   const classes = useStyles();
-  const { data, error, isLoading, isError} = useQuery("tvGenres", getTvGenres);
+  const { data, error, isLoading, isError } = useQuery("genres", getGenres);
 
   if (isLoading) {
     return <Spinner />;
@@ -41,13 +41,7 @@ export default function FilterTvShowsCard(props) {
     return <h1>{error.message}</h1>;
   }
   const genres = data.genres;
-  if (!genres.some(e => e.name === 'All'))  {
-    genres.unshift({id: 0, name: "All" })
-  };
-  
-  //got help with line 45
-  //https://stackoverflow.com/questions/8217419/how-to-determine-if-javascript-array-contains-an-object-with-an-attribute-that-e
-
+  genres.unshift({ id: "0", name: "All" });
 
   const handleChange = (e, type, value) => {
     e.preventDefault();
@@ -62,28 +56,27 @@ export default function FilterTvShowsCard(props) {
     handleChange(e, "genre", e.target.value);
   };
 
-
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography variant="h5" component="h1">
           <SearchIcon fontSize="large" />
-          Filter the Shows.
+          Filter the shows.
         </Typography>
         <TextField
       className={classes.formControl}
       id="filled-search"
-      label="Search a shows name"
+      label="Search field"
       type="search"
       value={props.titleFilter}
       variant="filled"
       onChange={handleTextChange}
     />
         <FormControl className={classes.formControl}>
-          <InputLabel id="Tvgenre-label">Genre</InputLabel>
-           <Select
-      labelId="Tvgenre-label"
-      id="Tvgenre-select"
+          <InputLabel id="genre-label">Genre</InputLabel>
+          <Select
+      labelId="genre-label"
+      id="genre-select"
       value={props.genreFilter}
       onChange={handleGenreChange}
     >
@@ -105,12 +98,10 @@ export default function FilterTvShowsCard(props) {
       <CardContent>
         <Typography variant="h5" component="h1">
           <SearchIcon fontSize="large" />
-          Filter Shows.
+          Filter the shows.
           <br />
         </Typography>
       </CardContent>
     </Card>
   );
-
-  
 }

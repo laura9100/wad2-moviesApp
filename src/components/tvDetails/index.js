@@ -7,78 +7,70 @@ import Fab from "@material-ui/core/Fab";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import TvReviews from "../tvReviews";
-
+import TvReviews from "../tvReviews"
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      listStyle: "none",
-      padding: theme.spacing(1.5),
-      margin: 0,
-    },
-    chip: {
-      margin: theme.spacing(0.5),
-    },
-    fab: {
-      position: "fixed",
-      bottom: theme.spacing(2),
-      right: theme.spacing(2),
-    },
-  }));
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    listStyle: "none",
+    padding: theme.spacing(1.5),
+    margin: 0,
+  },
+  chip: {
+    margin: theme.spacing(0.5),
+  },
+  fab: {
+    position: "fixed",
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  },
+}));
 
-const TvDetails = ({ show }) => {  // Don't miss this!
-    const classes = useStyles();
+const TvDetails = ({show }) => {  // Don't miss this!
+  const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  
+  return (
+    <>
+      <Typography variant="h5" component="h3">
+        Overview
+      </Typography>
 
+      <Typography variant="h6" component="p">
+        {show.overview}
+      </Typography>
 
-    return (
-      <>
-        <Typography variant="h5" component="h3">
-          Overview
-        </Typography>
-  
-        <Typography variant="h6" component="p">
-          {show.overview}
-        </Typography>
-
-        <Paper component="ul" className={classes.root}>
-          <li>
-            <Chip label="Genres" className={classes.chip} color="primary" />
+      <Paper component="ul" className={classes.root}>
+        <li>
+          <Chip label="Genres" className={classes.chip} color="primary" />
+        </li>
+        {show.genres.map((g) => (
+          <li key={g.name}>
+            <Chip label={g.name} className={classes.chip} />
           </li>
-          {show.genres.map((g) => (
-            <li key={g.name}>
-              <Chip label={g.name} className={classes.chip} />
-            </li>
-          ))}
-        </Paper>
+        ))}
+      </Paper>
+      <Paper component="ul" className={classes.root}>
 
-        <Paper component="ul" className={classes.root}>
-          <li>
-            <Chip label="First episode " className={classes.chip} color="primary" />
-            <Chip label={`Released: ${show.first_air_date}`} />
-            <Chip label="Last episode to date" className={classes.chip} color="primary" />
-            <Chip label={`Released: ${show.last_air_date}`} />
-          </li> 
+        <Chip
+          icon={<StarRate />}
+          label={`${show.vote_average} (${show.vote_count}`}
+        />
+      </Paper>
+      <Paper component="ul" className={classes.root}>
+        <li>
+          <Chip label="Production Countries" className={classes.chip} color="primary" />
+        </li>
+        {show.production_countries.map((g) => (
+          <li key={g.name}>
+            <Chip label={g.name} className={classes.chip} />
+          </li>
+        ))}
+      </Paper>
 
-        </Paper>
-
-        <Paper component="ul" className={classes.root}>
-          <li>
-            <Chip label="Average Rating Score" className={classes.chip} color="primary" />
-            
-            <Chip 
-            icon={<StarRate />}
-            label={`${show.vote_average}`} />
-            </li> 
-            </Paper>
-            
-
-            <Fab
+      <Fab
         color="secondary"
         variant="extended"
         onClick={() =>setDrawerOpen(true)}
@@ -93,6 +85,4 @@ const TvDetails = ({ show }) => {  // Don't miss this!
     </>
   );
 };
-
-
 export default  TvDetails ;
