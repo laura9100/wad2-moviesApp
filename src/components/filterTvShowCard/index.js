@@ -40,6 +40,13 @@ export default function FilterTvShowsCard(props) {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
+  const genres = data.genres;
+  if (!genres.some(e => e.name === 'All'))  {
+    genres.unshift({id: 0, name: "All" })
+  };
+
+  //got help with line 45
+  //https://stackoverflow.com/questions/8217419/how-to-determine-if-javascript-array-contains-an-object-with-an-attribute-that-e
 
   const handleChange = (e, type, value) => {
     e.preventDefault();
