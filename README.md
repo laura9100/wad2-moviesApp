@@ -37,11 +37,16 @@ SECRET=JWTSecret
 
 
 ## Security and Authentication
-Give details of authentication/ security implemented on the API(e.g. passport/sessions). Indicate which routes are protected.
+![image](https://user-images.githubusercontent.com/47563943/148440478-ce66154d-a16f-4188-8b5c-061e7633f998.png)
+I have a login/sign up to view the private route of favourite movies.
+![image](https://user-images.githubusercontent.com/47563943/148440638-35b0b66c-af27-4a21-85b6-3407262084c8.png)
+
+
+
 
 ## Integrating with React App
 
-Describe how you integrated your React app with the API. Perhaps link to the React App repo and give an example of an API call from React App. For example: 
+
 
 ~~~Javascript
 export const getTopRated = () => {
