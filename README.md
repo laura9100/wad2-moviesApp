@@ -9,13 +9,12 @@ Describe what needs to be on the machine to run the API (Node v?, NPM, MongoDB i
 
 Describe getting/installing the software, perhaps:
 
-```bat
+
 Clone wad2-moviesApp https://github.com/laura9100/wad2-moviesApp.git
 ```
 
 Clone assignment2 https://github.com/laura9100/assignment2.git
-
-```bat
+'''
 npm install
 ```
 
@@ -38,7 +37,9 @@ SECRET=JWTSecret
 
 ## Security and Authentication
 ![image](https://user-images.githubusercontent.com/47563943/148440478-ce66154d-a16f-4188-8b5c-061e7633f998.png)
+'''
 I have a login/sign up to view the private route of favourite movies.
+'''
 ![image](https://user-images.githubusercontent.com/47563943/148440638-35b0b66c-af27-4a21-85b6-3407262084c8.png)
 
 
