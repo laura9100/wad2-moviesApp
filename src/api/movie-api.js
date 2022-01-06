@@ -25,3 +25,22 @@ export const getMovies = () => {
     }
     ).then(res => res.json());
   };
+
+  export const getShows = () => {
+    return fetch(
+       '/api/movies',{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then(res => res.json());
+  };
+
+  export const getMovieDetails = async (id) => {
+    return await fetch(`/api/movies/tmdb/movies/${id}`,{headers: {
+     'Authorization': window.localStorage.getItem('token')
+  }
+ }
+ ).then(data => data.json())
+
+
+ }
