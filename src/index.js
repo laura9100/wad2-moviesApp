@@ -48,10 +48,10 @@ const App = () => {
       <Switch>
       <Route exact path="/reviews/form" component={AddMovieReviewPage} />
       <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
-      <PrivateRoute exact path="/movies/toprated" component={TopRatedPage} />
+      <Route exact path="/movies/toprated" component={TopRatedPage} />
       <Route exact path="/shows/airingnow" component={AiringNowPage} />
       <Route path="/reviews/:id" component={MovieReviewPage} />
-        <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+        <PrivateRoute exact path="/movies/favorites" component={FavoriteMoviesPage} />
         <Route path="/movies/:id" component={MoviePage} />
         <Route exact path="/shows/tvShows" component={TvShowsPage} />
         <Route exact path="/shows/:id" component={tvDetailsPage} /> 
