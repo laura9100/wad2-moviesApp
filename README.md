@@ -1,63 +1,58 @@
-# wad2-moviesApp
-# Assignment 1 - ReactJS app.
+# Assignment 2 - Web API.
 
 Name: Laura McBride
 
-## Overview.
-This Web App includes movies, favourite movies, upcoming and top rated movies, tv shows that are airing today and tv shows. You can filter and search in all these features.
-### Features.
 
-+ Upcoming Movies
-+ Top Rated Movies
-+ Tv Shows 
-+ Tv Shows airing now
-+ etc
+## Installation Requirements
 
+Describe what needs to be on the machine to run the API (Node v?, NPM, MongoDB instance, any other 3rd party software not in the package.json). 
 
-## API endpoints.
+Describe getting/installing the software, perhaps:
 
-+ Upcoming Movies - /movies/upcoming
-+ Top Rated Movies - /movies/toprated
-+ Tv Shows airing now - /shows/airingnow
-+ Tv Shows - /shows/tvShows
-+ Tv Details -/shows/id
+```bat
+Clone wad2-moviesApp https://github.com/laura9100/wad2-moviesApp.git
+```
 
-## App Design.
-### UI Design.
+Clone assignment2 https://github.com/laura9100/assignment2.git
 
+```bat
+npm install
+```
 
+## API Configuration
+Describe any configuration that needs to take place before running the API. For example, creating an ``.env`` and what variables to put in it. Give an example of how this might be structured/done.
+REMEMBER: DON'T PUT YOUR OWN USERNAMES/PASSWORDS/AUTH KEYS IN THE README OR ON GITHUB, just placeholders as indicated below:
 
-![image](https://user-images.githubusercontent.com/47563943/145731897-075ec290-62e8-4eae-8f6f-66c7e8f4fcc5.png)
->New movies that are up and coming
-
-![image](https://user-images.githubusercontent.com/47563943/145731970-4bd77d78-e19f-4633-9382-1b72d3ed89f7.png)
->Top Rated movies of all time.
-
-![image](https://user-images.githubusercontent.com/47563943/145731995-e753abc5-0518-416c-a16a-3e0f1154e6e4.png)
->What tv shows are airing today
-
-![image](https://user-images.githubusercontent.com/47563943/145732017-1f85ae3e-960b-44ee-a4f3-c8c5144b11ec.png)
->Shows a list of all Tv Shows
-
->Each of these pages can be searched and filtered
-
-### Routing.
-
-
-+ /shows/airingnow Airing Today.
-+ /shows/tvShows All Tv Shows
-+ /shows/:id Tv Shows Details.
-+ /movies/upcoming Upcoming movies.
+```bat
+REACT_APP_TMDB_KEY=18273981473921
+FAST_REFRESH=false
+NODE_ENV=development
+NODE_PATH=./src
+HOST=localhost
+MONGO_DB=mongoDbURL
+SEED_DB=True
+SECRET=JWTSecret
+```
 
 
 
-Assignment 1 - Agile Software Practice.
+## Security and Authentication
+Give details of authentication/ security implemented on the API(e.g. passport/sessions). Indicate which routes are protected.
 
-## Automated Testing.
+## Integrating with React App
 
-### Best test cases.
+Describe how you integrated your React app with the API. Perhaps link to the React App repo and give an example of an API call from React App. For example: 
+
+~~~Javascript
+export const getTopRated = () => {
+    return fetch('/api/movies/tmdb/toprated',{headers: {
+      'Authorization': window.localStorage.getItem('token')
+   }
+  }
+  ).then(res => res.json());
+  };
 
 
-+ cypress/integration/airingNow-page.spec.js - line 39
-+ cypress/integration/topRated-page.spec.js - line 92
-+ cypress/integration/upcoming-page.spec.js - line 75
+~~~
+
+

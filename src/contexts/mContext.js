@@ -1,6 +1,5 @@
 import React, { useState, createContext, useEffect, useReducer } from "react";
 import { getMovies } from "../api/movie-api";
-import { getTopRated } from "../api/movie-api";
 
 export const MoviesContext = createContext(null);
 
