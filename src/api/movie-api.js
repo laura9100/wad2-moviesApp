@@ -35,12 +35,10 @@ export const getMovies = () => {
     ).then(res => res.json());
   };
 
-  export const getMovieDetails = async (id) => {
-    return await fetch(`/api/movies/tmdb/movies/${id}`,{headers: {
-     'Authorization': window.localStorage.getItem('token')
+  export const getTopRated = () => {
+    return fetch('/api/movies/tmdb/toprated',{headers: {
+      'Authorization': window.localStorage.getItem('token')
+   }
   }
- }
- ).then(data => data.json())
-
-
- }
+  ).then(res => res.json());
+  };
