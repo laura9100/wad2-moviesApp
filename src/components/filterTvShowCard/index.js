@@ -40,6 +40,8 @@ export default function FilterTvShowsCard(props) {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
+  const genres = data.genres;
+  genres.unshift({ id: "0", name: "All" });
 
   const handleChange = (e, type, value) => {
     e.preventDefault();
